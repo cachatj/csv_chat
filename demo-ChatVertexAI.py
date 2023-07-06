@@ -35,7 +35,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file.name)
     st.dataframe(df.head(5))
 
-    chat = ChatVertesAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0.5)
+    chat = ChatVertexAI(model_name='chat-bison', verbose=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=0.5)
     agent = create_pandas_dataframe_agent(chat, df, verbose=True)
 
     st.text_input("Ask Something:", key="user")
