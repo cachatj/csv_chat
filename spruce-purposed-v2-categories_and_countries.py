@@ -1,6 +1,6 @@
 import pandas as pd
 
-from langchain.chat_models import ChatVertexAI
+from langchain.chat_models import ChatOpenAI
 from langchain.agents import create_pandas_dataframe_agent
 
 import streamlit as st
@@ -34,7 +34,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file.name)
     st.dataframe(df.head(5))
 
-    chat = ChatVertexAI(temperature=0.4)
+    chat = ChatOpenAI(temperature=0.4)
     agent = create_pandas_dataframe_agent(chat, df, verbose=True)
 
     st.text_input("Ask Something:", key="user")
