@@ -7,7 +7,7 @@ import streamlit as st
 from streamlit_chat import message
 import os
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = "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"
 
 if 'prompts' not in st.session_state:
     st.session_state.prompts = []
