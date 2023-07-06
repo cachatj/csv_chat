@@ -2,6 +2,7 @@ import pandas as pd
 
 from langchain.chat_models import ChatVertexAI
 from langchain.agents import create_pandas_dataframe_agent
+from langchain.callbacks import StreamingStdOutCallbackHandler
 
 import streamlit as st
 from streamlit_chat import message
