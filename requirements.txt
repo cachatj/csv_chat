@@ -2,3 +2,6 @@ langchain
 openai
 streamlit
 streamlit-chat
+tabulate
+pandas
+
