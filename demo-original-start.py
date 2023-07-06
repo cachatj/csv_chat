@@ -22,7 +22,7 @@ def send_click():
         st.session_state.responses.append(response)
 
 
-st.title(':blue[Yeyu\'s Data Analysis Chatbot] ☕')
+st.title(':blue[CSVChat - pandas_dataframe_agent] ☕')
 uploaded_file = st.file_uploader("Choose a csv file", type='csv')
 
 if uploaded_file is not None:
