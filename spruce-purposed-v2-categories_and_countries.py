@@ -7,6 +7,8 @@ import streamlit as st
 from streamlit_chat import message
 import os
 
+os.environ["OPENAI_API_KEY"] = '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'
+
 if 'prompts' not in st.session_state:
     st.session_state.prompts = []
 if 'responses' not in st.session_state:
@@ -33,7 +35,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file.name)
     st.dataframe(df.head(5))
 
-    chat = ChatOpenAI(temperature=0.4)
+    chat = ChatOpenAI(model_name='gpt-3.5-turbo',temperature=0)
     agent = create_pandas_dataframe_agent(chat, df, verbose=True)
 
     st.text_input("Ask Something:", key="user")
