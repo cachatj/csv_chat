@@ -4,4 +4,4 @@ streamlit
 streamlit-chat
 tabulate
 pandas
-
+google-cloud-aiplatform
