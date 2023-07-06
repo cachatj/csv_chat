@@ -11,7 +11,7 @@ def send_click():
 if st.session_state.user != '':
 prompt = st.session_state.user response = agent.run(prompt)
 st.session_state.prompts.append(prompt) st.session_state.responses.append(response)
-st.title(':blue[Yeyu\'s Data Analysis Chatbot] ☕')
+st.title(':blue[CSV Chat v1 - pandas_dataframe_agent] ☕')
 uploaded_file = st.file_uploader("Choose a csv file", type='csv')
 if uploaded_file is not None:
 csv_data = uploaded_file.read()
