@@ -6,8 +6,7 @@ from langchain.agents import create_pandas_dataframe_agent
 import streamlit as st
 from streamlit_chat import message
 import os
-
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = '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'
 
 if 'prompts' not in st.session_state:
     st.session_state.prompts = []
@@ -23,7 +22,7 @@ def send_click():
         st.session_state.responses.append(response)
 
 
-st.title(':blue[Spruce MapLayer - v2 (depreciated) - Purposed Data] ☕')
+st.title(':blue[Spruce MapLayer - v2 - Purposed Data] ☕')
 uploaded_file = st.file_uploader("Choose maplayer_h3_utilities.behavior_specset_exhibitionmetrics_with_categories_and_countries.csv file", type='csv')
 
 if uploaded_file is not None:
